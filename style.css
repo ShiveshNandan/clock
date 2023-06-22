@@ -1,21 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 body{
     height: 88.5vh;
     background: linear-gradient(40deg, black,blue,black 130%);
+    font-family: kanit;
+    color: aliceblue;
 }
 #clockContainer{
-    background: red;
+    background: rgb(175, 160, 160);
     height: 40vw;
     width: 40vw;
     margin: auto;
     margin-top: 5vw;
-    background: url(clock1.png);
+    border-radius: 1000px;
+    /* background: url(clock1.png); */
     background-size: cover;
+}
+#clockContainer img{
+    width: 100%;
+}
+#options img{
+    width: 60%;
+    align-self: center;
+    background: rgb(136, 119, 119);
+    border-radius: 1000px;
+    margin: 20px;
+}
+.clocks{
+    display: flex;
+    flex-direction: column;
+    height: 71.5vh;
+    overflow-y: scroll;
+    align-items: center;
+}
+.head{
+    width: 25vw;
+    text-align: center;
+}
+#options{
+    position: fixed;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+
 }
 /* #main{
     position: fixed;
     display: flex;
 } */
-#hour, #minute, #second, #date {
+#hour, #circle,#minute, #second, #date {
     position: absolute;
     background: #000;
     border-radius: 10px;
@@ -29,6 +61,15 @@ body{
     height: 8vw;
     left: 49.7vw;
     top: 17vw;
+    z-index: 3;
+    /* background: black; */
+}
+#circle{
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    left: 49.55vw;
+    top: 24.6vw;
     z-index: 3;
     /* background: black; */
 }
@@ -71,3 +112,16 @@ body{
     margin: auto;
     background: #000;
 } */
+
+@media only screen and (max-width: 750px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    #clocks{
+        flex-direction:row;
+    }
+    #options{
+        display: none;
+    }
+  }

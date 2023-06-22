@@ -17,3 +17,26 @@ setInterval(() => {
     second.style.transform = `rotate(${sr}deg)`;
     date.innerText = ddate;
 }, 1);
+
+let clocks = document.getElementsByClassName("clock");
+// let clocks = document.getElementById("clocks");
+// console.log(clocks);
+document.addEventListener('click', (e) =>{
+    // console.log("hi");
+    console.log(e.target.id);
+    document.getElementById("bk").src = "clock"+(e.target.id)+".png";
+})
+
+// let bk = document.getElementById("bk");
+// console.log(bk.target.src);
+// console.log("j");
+
+
+
+
+// Array.from(document.getElementsByClassName("clock")).forEach((element) =>{
+//     console.log(element);
+//     console.log("hi");
+// element.addEventListener('click', () =>{
+// })
+// })
