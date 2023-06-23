@@ -23,8 +23,15 @@ let clocks = document.getElementsByClassName("clock");
 // console.log(clocks);
 document.addEventListener('click', (e) =>{
     // console.log("hi");
-    console.log(e.target.id);
-    document.getElementById("bk").src = "clock"+(e.target.id)+".png";
+    let good = e.target.id;
+    console.log(good);
+    // console.log(e.target.id);
+    if( good == 1 || good == 2 || good == 4 || good == 3 || good == 5 || good == 6 || good == 7 || good == 8 || good == 9){
+        document.getElementById("bk").src = "clock"+(e.target.id)+".png";
+    console.log("g");
+    } else {
+        console.log("hi");
+    }
 })
 
 // let bk = document.getElementById("bk");
