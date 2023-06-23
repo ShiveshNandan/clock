@@ -119,10 +119,7 @@ body{
     display: none;
 }
 @media only screen and (max-width: 750px) {
-    body{
-        display: flex;
-        flex-direction: column;
-    }
+    
     #clocks{
         flex-direction:row;
     }
@@ -130,6 +127,9 @@ body{
         display: none;
     }
     .op{
-        display: block;
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20vw;
     }
   }
